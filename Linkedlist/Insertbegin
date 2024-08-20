@@ -35,3 +35,11 @@ int main()
  Print();
 }
 }
+/*output
+How many elements: 3
+enter number: 4
+List is: 4
+enter number: 2
+List is: 2 4
+enter number:3
+List is: 3 2 4 */
