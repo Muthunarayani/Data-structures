@@ -60,3 +60,7 @@ int main()
     print();
     return 0;
 }
+/* output
+3524
+enter the position: 2
+324 */
