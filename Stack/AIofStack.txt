@@ -1,0 +1,39 @@
+#include <stdio.h>
+#define MAX_SIZE 101
+int A[MAX_SIZE];
+int top= -1;
+void push(int x){
+    if(top==MAX_SIZE -1){
+        printf("\nStack overflow");
+        return;
+    }
+    A[++top]=x;
+}
+void pop(){
+    if(top==-1){
+        printf("No elements are there in stack");
+        return;
+    }
+    top--;
+}
+void Top(){
+    printf("%d",A[top]); 
+}
+void print(){
+    printf("stack:");
+    for(int i=0; i<=top;i++){
+        printf("%d",A[i]);
+    }
+    printf("\n");
+}
+int main()
+{
+  push(1);print();
+  push(2);print();
+  push(3);print();
+ pop();
+ print();
+ Top();
+  
+    return 0;
+}
