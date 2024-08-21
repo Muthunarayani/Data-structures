@@ -37,3 +37,9 @@ int main()
   
     return 0;
 }
+/* output 
+stack:1
+stack:12
+stack:123
+stack:12
+2 */
