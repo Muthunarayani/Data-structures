@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct Node{
+    int data;
+    struct Node* link;
+};
+struct Node* top = NULL;
+void push(int x){
+    struct Node* temp=(struct Node*)malloc(sizeof(struct Node));
+    temp->data=x;
+    temp->link= top;
+    top=temp;
+    
+}
+void pop(){
+    struct Node* temp=(struct Node*)malloc(sizeof(struct Node));
+    if(top==NULL) return;
+    temp=top;
+    top= top->link;
+    free(temp);
+}
+void print(){
+struct Node* temp = top;
+printf("Stack is:");
+while(temp!=NULL){
+    
+    printf(" %d",temp->data);
+    temp= temp->link;
+}
+printf("\n");
+}
+int main(){
+    push(2); print();
+     push(5); print();
+      push(12); print();
+      pop();
+      print();
+      return 0;
+}
+/* output
+Stack is: 2
+Stack is: 5 2
+Stack is: 12 5 2
+Stack is: 5 2  */
